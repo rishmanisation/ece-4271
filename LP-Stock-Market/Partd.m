@@ -1,0 +1,47 @@
+%Project 3: Part d
+%Rishabh Ananthan
+
+p = 1:1:10;
+N = 520;
+[x1,X1] = matrixMaker(1);
+[x2,X2] = matrixMaker(2);
+[x3,X3] = matrixMaker(3);
+[x4,X4] = matrixMaker(4);
+[x5,X5] = matrixMaker(5);
+[x6,X6] = matrixMaker(6);
+[x7,X7] = matrixMaker(7);
+[x8,X8] = matrixMaker(8);
+[x9,X9] = matrixMaker(9);
+[x10,X10] = matrixMaker(10);
+a1 = -X1\x1;
+a2 = -X2\x2;
+a3 = -X3\x3;
+a4 = -X4\x4;
+a5 = -X5\x5;
+a6 = -X6\x6;
+a7 = -X7\x7;
+a8 = -X8\x8;
+a9 = -X9\x9;
+a10 = -X10\x10;
+xhat1 = -X1*a1;
+xhat2 = -X2*a2;
+xhat3 = -X3*a3;
+xhat4 = -X4*a4;
+xhat5 = -X5*a5;
+xhat6 = -X6*a6;
+xhat7 = -X7*a7;
+xhat8 = -X8*a8;
+xhat9 = -X9*a9;
+xhat10 = -X10*a10;
+E1 = sqerrorcalc(x1,xhat1);
+E2 = sqerrorcalc(x2,xhat2);
+E3 = sqerrorcalc(x3,xhat3);
+E4 = sqerrorcalc(x4,xhat4);
+E5 = sqerrorcalc(x5,xhat5);
+E6 = sqerrorcalc(x6,xhat6);
+E7 = sqerrorcalc(x7,xhat7);
+E8 = sqerrorcalc(x8,xhat8);
+E9 = sqerrorcalc(x9,xhat9);
+E10 = sqerrorcalc(x10,xhat10);
+E = [E1 E2 E3 E4 E5 E6 E7 E8 E9 E10];
+plot(p,E);
